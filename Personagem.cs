@@ -1,19 +1,19 @@
 public class Personagem
 {
-    public int habilidade;
-    public int energia;
+    public int Habilidade { get; set; }
+    public int Energia { get; set; }
 
     private readonly Random random = new Random();
 
     protected int RolarDado() => random.Next(1, 7);
 
-    public int ForcaDeAtaque() => habilidade + RolarDado() + RolarDado();
+    public int ForcaDeAtaque() => Habilidade + RolarDado() + RolarDado();
 
     public void SofrerDano(int pontosDeDano)
     {
-        energia -= pontosDeDano;
+        Energia -= pontosDeDano;
     }
 
-    public bool EstaMorto() => energia <= 0;
+    public bool EstaMorto() => Energia <= 0;
 }
 
