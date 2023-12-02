@@ -15,5 +15,10 @@ public class Personagem
     }
 
     public bool EstaMorto() => Energia <= 0;
-}
 
+    public void Duelo()
+    {
+        ForcaDeAtaque();
+        SofrerDano(2);
+    }
+}
