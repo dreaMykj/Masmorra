@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 
-Console.WriteLine("    Masmorra    ");
+Console.WriteLine("--- Masmorra ---");
 
 List<Criatura> criaturas = new List<Criatura>();
 
@@ -123,6 +123,9 @@ foreach (Criatura criatura in criaturas)
             }
     
         heroi.SofrerDano(dano);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"\nHerói = Energia: {heroi.Energia}");
+        Console.ResetColor();
         Console.WriteLine($"{criatura.Nome} causa {dano} ponto(s) de dano{(!heroi.EstaMorto() ? ", mas você ainda não" : " e você")} está morto.\n");
         }
     }
